@@ -15,9 +15,13 @@ class injectCSS {
 
         if (this.duration != undefined) {
             setTimeout(() => {
-                document.head.querySelector(`#${this.fileName}-css`).remove()
+                this.remove()
             }, this.duration);
         }
+    }
+
+    remove() {
+        document.head.querySelector(`#${this.fileName}-css`).remove()
     }
 }
 
